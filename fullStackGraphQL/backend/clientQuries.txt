@@ -1,0 +1,70 @@
+
+In the node js server we dont have to write getAllUsers in query. we will be using when we are fetching from playground so that any one can understand!
+
+---------------------------------------------------
+get all the users
+
+
+`
+query getAllUsers{
+  users {
+    firstName
+    lastName
+    email
+    password
+  }
+}
+
+`
+------------------------------------------------------
+get all quotes
+
+`
+query getAllQoutes{
+ quotes {
+   name
+   by
+ }
+}
+
+`
+
+------------------------------------------------------
+
+get a user quote
+
+`
+query($quoteId: ID!){
+  quote(id: $quoteId) {
+   name 
+  }
+}
+
+`
+
+-------------------------------------------------------
+
+get an user
+
+`
+query($userId: ID!){
+  user(id: $userId) {
+    firstName
+  }
+}
+
+`
+
+
+------------------------------------------------------
+
+create an user
+
+`
+mutation($input: createUserInput){
+  createUser (input: $input) {
+    id
+  }
+}
+
+`
